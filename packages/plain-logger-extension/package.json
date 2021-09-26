@@ -10,7 +10,8 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
-		"release": "standard-version --path . --skip.bump --skip.commit --skip.tag",
+	  "clean": "rimraf dist",
+	  "release": "standard-version --path . --skip.bump --skip.commit --skip.tag",
 		"prepublishOnly": "npm run build"
 	},
 	"main": "dist/index.js",

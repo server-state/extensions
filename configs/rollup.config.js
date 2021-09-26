@@ -1,7 +1,12 @@
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
+import externals from 'rollup-plugin-node-externals';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import rollupPluginLicense from 'rollup-plugin-license';
 import graphql from '@rollup/plugin-graphql';
+import path from 'path';
 
 /**
  * A rollup configuration for a Typescript based extension with `src/index.ts`
@@ -27,17 +32,25 @@ export function rollupConfig(deps) {
 				plugins: [terser()]
 			}
 		],
-		external: [...Object.keys(deps || {}), 'fs', 'os', 'path'],
+		// external: [...Object.keys(deps || {}), 'fs', 'os', 'path'],
 		plugins: [
-			typescript({
-				declaration: true
+			externals({
+				exclude: 'tslib'
 			}),
+			// @ts-ignore
+			peerDepsExternal(),
+			resolve(),
+			commonjs(),
+			typescript(),
 			graphql(),
 			rollupPluginLicense({
 				sourcemap: true,
 				banner: {
 					commentStyle: 'ignored',
-					content: 'MIT Licensed. Copyright 2021 Ludwig Richter, Pablo Klaschka'
+					content: {
+						file: path.join(__dirname, 'LICENSE'),
+						encoding: 'utf8'
+					}
 				}
 			})
 		]
