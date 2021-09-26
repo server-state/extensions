@@ -1,0 +1,213 @@
+type Query {
+	"""
+	The APIs for inspecting the server state.
+
+	This is the core of the Server State ecosystem and what most plugins will interact with.
+	"""
+	serverState: ServerState!
+
+	"""
+	The currently authenticated user, if any
+	"""
+	me: User
+
+	"""
+	List of all users.
+
+	**Accessible for admins only.**
+	"""
+	users: [User!]!
+
+	"""
+	Get user details based on their user id.
+
+	**Accessible for admins only.**
+	"""
+	userById("The user's ID" id: ID!): User
+
+	"""
+	Get user details based on their email address.
+
+	**Accessible for admins only.**
+	"""
+	userByEmail("The user's email address" email: String!): User
+}
+
+type Mutation {
+	"""
+	A mutation to login using email and password and get a JWT token for authentication.
+	"""
+	login(email: String!, password: String!): LoginResponse!
+
+	"""
+	Adds a new user.
+
+	**Accessible for admins only.**
+	"""
+	addUser(user: AddUserInput!): AddUserResponse!
+
+	"""
+	Removes a user.
+
+	**Accessible for admins only.**
+	"""
+	removeUser("The user's user id" id: ID!): RemoveUserResponse!
+
+	"""
+	Edits an existing user.
+
+	Specify the user you want to edit in the `userEdits` input's `id` field.
+
+	**Accessible for admins only.**
+	"""
+	editUser(user: EditUserInput!): EditUserResponse!
+}
+
+"""
+The data returned by the `login` mutation.
+"""
+type LoginResponse {
+	"""
+	A JWT token for authentication.
+
+	Use the header `Authorization: Bearer [token]` in later API interactions.
+	"""
+	token: String!
+	"""
+	Details about the authenticated user.
+	"""
+	me: User!
+}
+
+"""
+The data returned by the `addUser` mutation.
+"""
+type AddUserResponse {
+	"""
+	The newly created user.
+	"""
+	user: User!
+}
+
+"""
+The data returned by the `removeUser` mutation.
+"""
+type RemoveUserResponse {
+	"""
+	`true` if deletion was successful, `false` otherwise.
+	"""
+	success: Boolean!
+}
+
+"""
+The data returned by the `editUser` mutation.
+"""
+type EditUserResponse {
+	"""
+	The newly saved user details.
+	"""
+	user: User!
+}
+
+"""
+A `JSONSerializable` value represented as its serialized JSON string.
+"""
+scalar JSON
+
+"""
+The ServerState type that represents every query about the server state.
+
+Extensions may extend this type with a property identical to their own ID to add additional "query-able" parameters.
+
+For example (with a plugin id of `ABCDEF`):
+
+```graphql
+extend type ServerState {
+	ABCDEF: ABCDEF_State
+}
+
+type ABCDEF_State {
+	randomNumber: Int
+}
+```
+"""
+type ServerState {
+	"""
+	The timestamp of the query's execution
+	"""
+	timestamp: String
+}
+
+"""
+An object representing a single user
+"""
+type User {
+	"""
+	The user's unique ID
+	"""
+	id: ID!
+	"""
+	The user's email address
+	"""
+	email: String!
+	"""
+	The user's role within the system
+	"""
+	role: UserRole
+}
+
+"""
+A user's role. This defines the user's privileges within the system.
+"""
+enum UserRole {
+	"""
+	An admin user with additional privileges (like managing other user accounts and installing extensions)
+	"""
+	admin
+	"""
+	A "normal" user without any special privileges
+	"""
+	user
+}
+
+"""
+Input for the `addUser` mutation
+"""
+input AddUserInput {
+	"""
+	The user's email address.
+	"""
+	email: String!
+
+	"""
+	The new user's password.
+
+	If not specified, the new user won't be able to login until the password gets reset.
+	"""
+	password: String
+
+	"""
+	The new user's role. Defaults to `user`.
+	"""
+	role: UserRole
+}
+
+"""
+Input for the `editUser` mutation
+"""
+input EditUserInput {
+	"""
+	The (existing !) user id.
+	"""
+	id: ID!
+
+	"""
+	A new email address, if applicable.
+	"""
+	email: String
+
+	"""
+	A new user role, if applicable.
+	"""
+	role: UserRole
+}

@@ -1,0 +1,15 @@
+# Uncomment the following to add schema extensions with your extension:
+#extend type ServerState {
+#	"""
+#	Documentation for field
+#	"""
+#	YOUR_ID_CONSTANT: YOUR_ID_CONSTANT_TYPE
+#}
+#
+#
+#"""
+#Documentation for YOUR_ID_CONSTANT_TYPE
+#"""
+#type YOUR_ID_CONSTANT_TYPE {
+#	value: Boolean!
+#}

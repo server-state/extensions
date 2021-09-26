@@ -1,0 +1,55 @@
+{
+	"name": "root",
+	"version": "0.3.1",
+	"private": true,
+	"scripts": {
+		"release": "standard-version -a",
+		"build-all": "npm run build --if-present -ws",
+		"publish-all": "node scripts/hydrate-versions.js && npm publish -ws && git reset --hard",
+		"add-extension": "node scripts/add-extension.js",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-pattern node_modules/ --no-error-on-unmatched-pattern \".\"",
+		"style": "prettier --write package.json '**/*{.ts,.tsx,.js,.jsx,.json,.html,.css,.scss,.sass,.yaml,.yml,.md}'",
+		"style:ci": "prettier --list-different package.json '**/*{.ts,.tsx,.js,.jsx,.json,.html,.css,.scss,.sass,.yaml,.yml,.md}'"
+	},
+	"standard-version": {
+		"scripts": {
+			"postbump": "node scripts/sync-package-versions.js && npm run release -ws && git add packages"
+		}
+	},
+	"devDependencies": {
+		"@rollup/plugin-graphql": "^1.0.0",
+		"@rollup/plugin-typescript": "^8.2.5",
+		"@server-state/types": "^0.5.0",
+		"@types/node": "^16.9.6",
+		"@types/shelljs": "^0.8.9",
+		"@typescript-eslint/eslint-plugin": "^4.31.2",
+		"@typescript-eslint/parser": "^4.31.2",
+		"change-case": "^4.1.2",
+		"enquirer": "^2.3.6",
+		"eslint": "^7.32.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-jsdoc": "^36.0.8",
+		"eslint-plugin-prettier": "^4.0.0",
+		"glob": "^7.2.0",
+		"prettier": "^2.4.1",
+		"rollup": "^2.57.0",
+		"rollup-plugin-license": "^2.5.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"shelljs": "^0.8.4",
+		"standard-version": "^9.3.1",
+		"tslib": "^2.3.1",
+		"typescript": "^4.4.3"
+	},
+	"dependencies": {
+		"@server-state/cpu-overview-extension": "file:packages/cpu-overview-extension",
+		"@server-state/plain-logger-ext": "file:packages/plain-logger-extension",
+		"@server-state/network-devices-overview-extension": "file:packages/network-devices-overview-extension"
+	},
+	"workspaces": [
+		"packages/cpu-overview-extension",
+		"packages/plain-logger-extension",
+		"packages/network-devices-overview-extension"
+	]
+}

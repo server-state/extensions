@@ -1,0 +1,30 @@
+extend type ServerState {
+	"""
+	Infos regarding the server's CPU(/-s)
+	"""
+	CPU: CPUInfo!
+}
+
+"""
+Various infos regarding the server's CPU(/-s)
+"""
+type CPUInfo {
+	"""
+	A list of all installed/detected CPUs
+	"""
+	cpus: [CPUDetails!]!
+}
+
+"""
+Represents a single CPU
+"""
+type CPUDetails {
+	"""
+	The CPU model name
+	"""
+	model: String!
+	"""
+	The CPU speed in MHz
+	"""
+	speed: Int!
+}
