@@ -28,6 +28,6 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"graphql": "^15.6.0"
+		"graphql": "^16.0.0"
 	}
 }
