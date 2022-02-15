@@ -1,6 +1,6 @@
 {
 	"name": "@server-state/network-devices-overview-extension",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "Add GraphQL query endpoints to examine the installed/detected network devices",
 	"author": "fliegwerk",
 	"license": "MIT",
@@ -10,8 +10,8 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
-	  "clean": "rimraf dist",
-	  "release": "standard-version --path . --skip.bump --skip.commit --skip.tag",
+		"clean": "rimraf dist",
+		"release": "standard-version --path . --skip.bump --skip.commit --skip.tag",
 		"prepublishOnly": "npm run build"
 	},
 	"main": "dist/index.js",
