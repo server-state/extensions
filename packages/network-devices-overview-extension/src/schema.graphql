@@ -1,15 +1,19 @@
-# Uncomment the following to add schema extensions with your extension:
-#extend type ServerState {
-#	"""
-#	Documentation for field
-#	"""
-#	NETDEVSO: NETDEVSO_TYPE
-#}
-#
-#
-#"""
-#Documentation for NETDEVSO_TYPE
-#"""
-#type NETDEVSO_TYPE {
-#	value: Boolean!
-#}
+extend type ServerState {
+	"""
+	An overview of the network devices
+	"""
+	NETDEVSO: NETDEVSO_TYPE
+}
+
+
+"""
+A collection of information about the installed network devices.
+"""
+type NETDEVSO_TYPE {
+	"""
+	A JSON string representing the output of Node's require('os').networkInterfaces() result.
+
+	Cf. https://nodejs.org/docs/latest/api/os.html#osnetworkinterfaces
+	"""
+	interfaces: JSON
+}
