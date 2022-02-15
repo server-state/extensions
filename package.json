@@ -17,6 +17,10 @@
 			"postbump": "node scripts/sync-package-versions.js && npm run release -ws && git add packages"
 		}
 	},
+	"engines": {
+	  "node": ">=16",
+	  "npm": ">=7.14"
+	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^21.0.1",
 		"@rollup/plugin-graphql": "^1.0.0",
