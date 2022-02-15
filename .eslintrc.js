@@ -83,7 +83,8 @@ module.exports = {
 		'*.spec.js',
 		'*.test.js',
 		'test/*.js',
-		'**/__tests__/**/*.js'
+		'**/__tests__/**/*.js',
+		'rollup.config.js'
 	],
 	overrides: [
 		{
