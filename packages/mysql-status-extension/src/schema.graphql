@@ -1,0 +1,3845 @@
+extend type ServerState {
+	"""
+	MySQL Global Server Status information
+	"""
+	MYSQLSTAT: MYSQLSTAT_TYPE
+}
+
+"""
+Information returned by the "SHOW GLOBAL STATUS" MySQL command
+
+Auto-generated schema definition.
+
+Compatible with / generated for MySQL v8.0.
+Generated from https://dev.mysql.com/doc/refman/8.0/en/server-status-variable-reference.html.
+"""
+type MYSQLSTAT_TYPE {
+	"""
+	Value of the `Aborted_clients` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Aborted_clients.
+	"""
+	Aborted_clients: Int
+	"""
+	Value of the `Aborted_connects` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Aborted_connects.
+	"""
+	Aborted_connects: Int
+	"""
+	Value of the `Acl_cache_items_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Acl_cache_items_count.
+	"""
+	Acl_cache_items_count: Int
+	"""
+	Value of the `Audit_log_current_size` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_current_size.
+	"""
+	Audit_log_current_size: Int
+	"""
+	Value of the `Audit_log_event_max_drop_size` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_event_max_drop_size.
+	"""
+	Audit_log_event_max_drop_size: Int
+	"""
+	Value of the `Audit_log_events` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_events.
+	"""
+	Audit_log_events: Int
+	"""
+	Value of the `Audit_log_events_filtered` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_events_filtered.
+	"""
+	Audit_log_events_filtered: Int
+	"""
+	Value of the `Audit_log_events_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_events_lost.
+	"""
+	Audit_log_events_lost: Int
+	"""
+	Value of the `Audit_log_events_written` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_events_written.
+	"""
+	Audit_log_events_written: Int
+	"""
+	Value of the `Audit_log_total_size` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_total_size.
+	"""
+	Audit_log_total_size: Int
+	"""
+	Value of the `Audit_log_write_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#statvar_Audit_log_write_waits.
+	"""
+	Audit_log_write_waits: Int
+	"""
+	Value of the `Authentication_ldap_sasl_supported_methods` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Authentication_ldap_sasl_supported_methods.
+	"""
+	Authentication_ldap_sasl_supported_methods: String
+	"""
+	Value of the `Binlog_cache_disk_use` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Binlog_cache_disk_use.
+	"""
+	Binlog_cache_disk_use: Int
+	"""
+	Value of the `Binlog_cache_use` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Binlog_cache_use.
+	"""
+	Binlog_cache_use: Int
+	"""
+	Value of the `Binlog_stmt_cache_disk_use` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Binlog_stmt_cache_disk_use.
+	"""
+	Binlog_stmt_cache_disk_use: Int
+	"""
+	Value of the `Binlog_stmt_cache_use` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Binlog_stmt_cache_use.
+	"""
+	Binlog_stmt_cache_use: Int
+	"""
+	Value of the `Bytes_received` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Bytes_received.
+	"""
+	Bytes_received: Int
+	"""
+	Value of the `Bytes_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Bytes_sent.
+	"""
+	Bytes_sent: Int
+	"""
+	Value of the `Caching_sha2_password_rsa_public_key` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Caching_sha2_password_rsa_public_key.
+	"""
+	Caching_sha2_password_rsa_public_key: String
+	"""
+	Value of the `Com_admin_commands` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_admin_commands: Int
+	"""
+	Value of the `Com_alter_db` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_db: Int
+	"""
+	Value of the `Com_alter_event` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_event: Int
+	"""
+	Value of the `Com_alter_function` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_function: Int
+	"""
+	Value of the `Com_alter_procedure` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_procedure: Int
+	"""
+	Value of the `Com_alter_resource_group` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_resource_group: Int
+	"""
+	Value of the `Com_alter_server` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_server: Int
+	"""
+	Value of the `Com_alter_table` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_table: Int
+	"""
+	Value of the `Com_alter_tablespace` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_tablespace: Int
+	"""
+	Value of the `Com_alter_user` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_user: Int
+	"""
+	Value of the `Com_alter_user_default_role` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_alter_user_default_role: Int
+	"""
+	Value of the `Com_analyze` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_analyze: Int
+	"""
+	Value of the `Com_assign_to_keycache` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_assign_to_keycache: Int
+	"""
+	Value of the `Com_begin` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_begin: Int
+	"""
+	Value of the `Com_binlog` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_binlog: Int
+	"""
+	Value of the `Com_call_procedure` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_call_procedure: Int
+	"""
+	Value of the `Com_change_db` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_change_db: Int
+	"""
+	Value of the `Com_change_master` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_change_master: Int
+	"""
+	Value of the `Com_change_repl_filter` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_change_repl_filter: Int
+	"""
+	Value of the `Com_change_replication_source` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_change_replication_source: Int
+	"""
+	Value of the `Com_check` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_check: Int
+	"""
+	Value of the `Com_checksum` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_checksum: Int
+	"""
+	Value of the `Com_clone` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_clone: Int
+	"""
+	Value of the `Com_commit` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_commit: Int
+	"""
+	Value of the `Com_create_db` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_db: Int
+	"""
+	Value of the `Com_create_event` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_event: Int
+	"""
+	Value of the `Com_create_function` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_function: Int
+	"""
+	Value of the `Com_create_index` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_index: Int
+	"""
+	Value of the `Com_create_procedure` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_procedure: Int
+	"""
+	Value of the `Com_create_resource_group` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_resource_group: Int
+	"""
+	Value of the `Com_create_role` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_role: Int
+	"""
+	Value of the `Com_create_server` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_server: Int
+	"""
+	Value of the `Com_create_table` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_table: Int
+	"""
+	Value of the `Com_create_trigger` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_trigger: Int
+	"""
+	Value of the `Com_create_udf` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_udf: Int
+	"""
+	Value of the `Com_create_user` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_user: Int
+	"""
+	Value of the `Com_create_view` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_create_view: Int
+	"""
+	Value of the `Com_dealloc_sql` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_dealloc_sql: Int
+	"""
+	Value of the `Com_delete` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_delete: Int
+	"""
+	Value of the `Com_delete_multi` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_delete_multi: Int
+	"""
+	Value of the `Com_do` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_do: Int
+	"""
+	Value of the `Com_drop_db` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_db: Int
+	"""
+	Value of the `Com_drop_event` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_event: Int
+	"""
+	Value of the `Com_drop_function` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_function: Int
+	"""
+	Value of the `Com_drop_index` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_index: Int
+	"""
+	Value of the `Com_drop_procedure` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_procedure: Int
+	"""
+	Value of the `Com_drop_resource_group` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_resource_group: Int
+	"""
+	Value of the `Com_drop_role` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_role: Int
+	"""
+	Value of the `Com_drop_server` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_server: Int
+	"""
+	Value of the `Com_drop_table` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_table: Int
+	"""
+	Value of the `Com_drop_trigger` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_trigger: Int
+	"""
+	Value of the `Com_drop_user` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_user: Int
+	"""
+	Value of the `Com_drop_view` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_drop_view: Int
+	"""
+	Value of the `Com_empty_query` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_empty_query: Int
+	"""
+	Value of the `Com_execute_sql` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_execute_sql: Int
+	"""
+	Value of the `Com_explain_other` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_explain_other: Int
+	"""
+	Value of the `Com_flush` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_flush: Int
+	"""
+	Value of the `Com_get_diagnostics` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_get_diagnostics: Int
+	"""
+	Value of the `Com_grant` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_grant: Int
+	"""
+	Value of the `Com_grant_roles` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_grant_roles: Int
+	"""
+	Value of the `Com_group_replication_start` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_group_replication_start: Int
+	"""
+	Value of the `Com_group_replication_stop` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_group_replication_stop: Int
+	"""
+	Value of the `Com_ha_close` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_ha_close: Int
+	"""
+	Value of the `Com_ha_open` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_ha_open: Int
+	"""
+	Value of the `Com_ha_read` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_ha_read: Int
+	"""
+	Value of the `Com_help` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_help: Int
+	"""
+	Value of the `Com_insert` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_insert: Int
+	"""
+	Value of the `Com_insert_select` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_insert_select: Int
+	"""
+	Value of the `Com_install_component` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_install_component: Int
+	"""
+	Value of the `Com_install_plugin` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_install_plugin: Int
+	"""
+	Value of the `Com_kill` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_kill: Int
+	"""
+	Value of the `Com_load` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_load: Int
+	"""
+	Value of the `Com_lock_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_lock_tables: Int
+	"""
+	Value of the `Com_optimize` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_optimize: Int
+	"""
+	Value of the `Com_preload_keys` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_preload_keys: Int
+	"""
+	Value of the `Com_prepare_sql` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_prepare_sql: Int
+	"""
+	Value of the `Com_purge` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_purge: Int
+	"""
+	Value of the `Com_purge_before_date` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_purge_before_date: Int
+	"""
+	Value of the `Com_release_savepoint` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_release_savepoint: Int
+	"""
+	Value of the `Com_rename_table` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_rename_table: Int
+	"""
+	Value of the `Com_rename_user` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_rename_user: Int
+	"""
+	Value of the `Com_repair` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_repair: Int
+	"""
+	Value of the `Com_replace` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_replace: Int
+	"""
+	Value of the `Com_replace_select` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_replace_select: Int
+	"""
+	Value of the `Com_replica_start` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_replica_start: Int
+	"""
+	Value of the `Com_replica_stop` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_replica_stop: Int
+	"""
+	Value of the `Com_reset` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_reset: Int
+	"""
+	Value of the `Com_resignal` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_resignal: Int
+	"""
+	Value of the `Com_restart` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_restart: Int
+	"""
+	Value of the `Com_revoke` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_revoke: Int
+	"""
+	Value of the `Com_revoke_all` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_revoke_all: Int
+	"""
+	Value of the `Com_revoke_roles` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_revoke_roles: Int
+	"""
+	Value of the `Com_rollback` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_rollback: Int
+	"""
+	Value of the `Com_rollback_to_savepoint` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_rollback_to_savepoint: Int
+	"""
+	Value of the `Com_savepoint` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_savepoint: Int
+	"""
+	Value of the `Com_select` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_select: Int
+	"""
+	Value of the `Com_set_option` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_set_option: Int
+	"""
+	Value of the `Com_set_resource_group` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_set_resource_group: Int
+	"""
+	Value of the `Com_set_role` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_set_role: Int
+	"""
+	Value of the `Com_show_authors` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_authors: Int
+	"""
+	Value of the `Com_show_binlog_events` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_binlog_events: Int
+	"""
+	Value of the `Com_show_binlogs` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_binlogs: Int
+	"""
+	Value of the `Com_show_charsets` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_charsets: Int
+	"""
+	Value of the `Com_show_collations` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_collations: Int
+	"""
+	Value of the `Com_show_contributors` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_contributors: Int
+	"""
+	Value of the `Com_show_create_db` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_create_db: Int
+	"""
+	Value of the `Com_show_create_event` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_create_event: Int
+	"""
+	Value of the `Com_show_create_func` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_create_func: Int
+	"""
+	Value of the `Com_show_create_proc` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_create_proc: Int
+	"""
+	Value of the `Com_show_create_table` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_create_table: Int
+	"""
+	Value of the `Com_show_create_trigger` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_create_trigger: Int
+	"""
+	Value of the `Com_show_create_user` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_create_user: Int
+	"""
+	Value of the `Com_show_databases` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_databases: Int
+	"""
+	Value of the `Com_show_engine_logs` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_engine_logs: Int
+	"""
+	Value of the `Com_show_engine_mutex` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_engine_mutex: Int
+	"""
+	Value of the `Com_show_engine_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_engine_status: Int
+	"""
+	Value of the `Com_show_errors` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_errors: Int
+	"""
+	Value of the `Com_show_events` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_events: Int
+	"""
+	Value of the `Com_show_fields` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_fields: Int
+	"""
+	Value of the `Com_show_function_code` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_function_code: Int
+	"""
+	Value of the `Com_show_function_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_function_status: Int
+	"""
+	Value of the `Com_show_grants` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_grants: Int
+	"""
+	Value of the `Com_show_keys` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_keys: Int
+	"""
+	Value of the `Com_show_master_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_master_status: Int
+	"""
+	Value of the `Com_show_ndb_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_ndb_status: Int
+	"""
+	Value of the `Com_show_open_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_open_tables: Int
+	"""
+	Value of the `Com_show_plugins` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_plugins: Int
+	"""
+	Value of the `Com_show_privileges` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_privileges: Int
+	"""
+	Value of the `Com_show_procedure_code` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_procedure_code: Int
+	"""
+	Value of the `Com_show_procedure_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_procedure_status: Int
+	"""
+	Value of the `Com_show_processlist` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_processlist: Int
+	"""
+	Value of the `Com_show_profile` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_profile: Int
+	"""
+	Value of the `Com_show_profiles` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_profiles: Int
+	"""
+	Value of the `Com_show_relaylog_events` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_relaylog_events: Int
+	"""
+	Value of the `Com_show_replica_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_replica_status: Int
+	"""
+	Value of the `Com_show_replicas` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_replicas: Int
+	"""
+	Value of the `Com_show_slave_hosts` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_slave_hosts: Int
+	"""
+	Value of the `Com_show_slave_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_slave_status: Int
+	"""
+	Value of the `Com_show_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_status: Int
+	"""
+	Value of the `Com_show_storage_engines` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_storage_engines: Int
+	"""
+	Value of the `Com_show_table_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_table_status: Int
+	"""
+	Value of the `Com_show_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_tables: Int
+	"""
+	Value of the `Com_show_triggers` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_triggers: Int
+	"""
+	Value of the `Com_show_variables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_variables: Int
+	"""
+	Value of the `Com_show_warnings` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_show_warnings: Int
+	"""
+	Value of the `Com_shutdown` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_shutdown: Int
+	"""
+	Value of the `Com_signal` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_signal: Int
+	"""
+	Value of the `Com_slave_start` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_slave_start: Int
+	"""
+	Value of the `Com_slave_stop` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_slave_stop: Int
+	"""
+	Value of the `Com_stmt_close` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_stmt_close: Int
+	"""
+	Value of the `Com_stmt_execute` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_stmt_execute: Int
+	"""
+	Value of the `Com_stmt_fetch` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_stmt_fetch: Int
+	"""
+	Value of the `Com_stmt_prepare` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_stmt_prepare: Int
+	"""
+	Value of the `Com_stmt_reprepare` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_stmt_reprepare: Int
+	"""
+	Value of the `Com_stmt_reset` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_stmt_reset: Int
+	"""
+	Value of the `Com_stmt_send_long_data` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_stmt_send_long_data: Int
+	"""
+	Value of the `Com_truncate` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_truncate: Int
+	"""
+	Value of the `Com_uninstall_component` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_uninstall_component: Int
+	"""
+	Value of the `Com_uninstall_plugin` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_uninstall_plugin: Int
+	"""
+	Value of the `Com_unlock_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_unlock_tables: Int
+	"""
+	Value of the `Com_update` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_update: Int
+	"""
+	Value of the `Com_update_multi` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_update_multi: Int
+	"""
+	Value of the `Com_xa_commit` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_xa_commit: Int
+	"""
+	Value of the `Com_xa_end` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_xa_end: Int
+	"""
+	Value of the `Com_xa_prepare` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_xa_prepare: Int
+	"""
+	Value of the `Com_xa_recover` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_xa_recover: Int
+	"""
+	Value of the `Com_xa_rollback` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_xa_rollback: Int
+	"""
+	Value of the `Com_xa_start` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx.
+	"""
+	Com_xa_start: Int
+	"""
+	Value of the `Compression_algorithm` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Compression_algorithm.
+	"""
+	Compression_algorithm: String
+	"""
+	Value of the `Compression_level` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Compression_level.
+	"""
+	Compression_level: Int
+	"""
+	Value of the `Connection_control_delay_generated` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/connection-control-variables.html#statvar_Connection_control_delay_generated.
+	"""
+	Connection_control_delay_generated: Int
+	"""
+	Value of the `Connection_errors_accept` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Connection_errors_accept.
+	"""
+	Connection_errors_accept: Int
+	"""
+	Value of the `Connection_errors_internal` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Connection_errors_internal.
+	"""
+	Connection_errors_internal: Int
+	"""
+	Value of the `Connection_errors_max_connections` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Connection_errors_max_connections.
+	"""
+	Connection_errors_max_connections: Int
+	"""
+	Value of the `Connection_errors_peer_address` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Connection_errors_peer_address.
+	"""
+	Connection_errors_peer_address: Int
+	"""
+	Value of the `Connection_errors_select` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Connection_errors_select.
+	"""
+	Connection_errors_select: Int
+	"""
+	Value of the `Connection_errors_tcpwrap` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Connection_errors_tcpwrap.
+	"""
+	Connection_errors_tcpwrap: Int
+	"""
+	Value of the `Connections` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Connections.
+	"""
+	Connections: Int
+	"""
+	Value of the `Created_tmp_disk_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Created_tmp_disk_tables.
+	"""
+	Created_tmp_disk_tables: Int
+	"""
+	Value of the `Created_tmp_files` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Created_tmp_files.
+	"""
+	Created_tmp_files: Int
+	"""
+	Value of the `Created_tmp_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Created_tmp_tables.
+	"""
+	Created_tmp_tables: Int
+	"""
+	Value of the `Current_tls_ca` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_ca.
+	"""
+	Current_tls_ca: String
+	"""
+	Value of the `Current_tls_capath` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_capath.
+	"""
+	Current_tls_capath: String
+	"""
+	Value of the `Current_tls_cert` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_cert.
+	"""
+	Current_tls_cert: String
+	"""
+	Value of the `Current_tls_cipher` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_cipher.
+	"""
+	Current_tls_cipher: String
+	"""
+	Value of the `Current_tls_ciphersuites` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_ciphersuites.
+	"""
+	Current_tls_ciphersuites: String
+	"""
+	Value of the `Current_tls_crl` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_crl.
+	"""
+	Current_tls_crl: String
+	"""
+	Value of the `Current_tls_crlpath` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_crlpath.
+	"""
+	Current_tls_crlpath: String
+	"""
+	Value of the `Current_tls_key` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_key.
+	"""
+	Current_tls_key: String
+	"""
+	Value of the `Current_tls_version` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Current_tls_version.
+	"""
+	Current_tls_version: String
+	"""
+	Value of the `Delayed_errors` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Delayed_errors.
+	"""
+	Delayed_errors: Int
+	"""
+	Value of the `Delayed_insert_threads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Delayed_insert_threads.
+	"""
+	Delayed_insert_threads: Int
+	"""
+	Value of the `Delayed_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Delayed_writes.
+	"""
+	Delayed_writes: Int
+	"""
+	Value of the `dragnet.Status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_dragnet.Status.
+	"""
+	dragnet__Status: String
+	"""
+	Value of the `Error_log_buffered_bytes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Error_log_buffered_bytes.
+	"""
+	Error_log_buffered_bytes: Int
+	"""
+	Value of the `Error_log_buffered_events` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Error_log_buffered_events.
+	"""
+	Error_log_buffered_events: Int
+	"""
+	Value of the `Error_log_expired_events` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Error_log_expired_events.
+	"""
+	Error_log_expired_events: Int
+	"""
+	Value of the `Error_log_latest_write` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Error_log_latest_write.
+	"""
+	Error_log_latest_write: Int
+	"""
+	Value of the `Firewall_access_denied` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/firewall-reference.html#statvar_Firewall_access_denied.
+	"""
+	Firewall_access_denied: Int
+	"""
+	Value of the `Firewall_access_granted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/firewall-reference.html#statvar_Firewall_access_granted.
+	"""
+	Firewall_access_granted: Int
+	"""
+	Value of the `Firewall_cached_entries` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/firewall-reference.html#statvar_Firewall_cached_entries.
+	"""
+	Firewall_cached_entries: Int
+	"""
+	Value of the `Flush_commands` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Flush_commands.
+	"""
+	Flush_commands: Int
+	"""
+	Value of the `Global_connection_memory` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Global_connection_memory.
+	"""
+	Global_connection_memory: Int
+	"""
+	Value of the `group_replication_primary_member` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_group_replication_primary_member.
+	"""
+	group_replication_primary_member: String
+	"""
+	Value of the `Handler_commit` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_commit.
+	"""
+	Handler_commit: Int
+	"""
+	Value of the `Handler_delete` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_delete.
+	"""
+	Handler_delete: Int
+	"""
+	Value of the `Handler_discover` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Handler_discover.
+	"""
+	Handler_discover: Int
+	"""
+	Value of the `Handler_external_lock` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_external_lock.
+	"""
+	Handler_external_lock: Int
+	"""
+	Value of the `Handler_mrr_init` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_mrr_init.
+	"""
+	Handler_mrr_init: Int
+	"""
+	Value of the `Handler_prepare` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_prepare.
+	"""
+	Handler_prepare: Int
+	"""
+	Value of the `Handler_read_first` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_read_first.
+	"""
+	Handler_read_first: Int
+	"""
+	Value of the `Handler_read_key` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_read_key.
+	"""
+	Handler_read_key: Int
+	"""
+	Value of the `Handler_read_last` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_read_last.
+	"""
+	Handler_read_last: Int
+	"""
+	Value of the `Handler_read_next` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_read_next.
+	"""
+	Handler_read_next: Int
+	"""
+	Value of the `Handler_read_prev` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_read_prev.
+	"""
+	Handler_read_prev: Int
+	"""
+	Value of the `Handler_read_rnd` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_read_rnd.
+	"""
+	Handler_read_rnd: Int
+	"""
+	Value of the `Handler_read_rnd_next` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_read_rnd_next.
+	"""
+	Handler_read_rnd_next: Int
+	"""
+	Value of the `Handler_rollback` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_rollback.
+	"""
+	Handler_rollback: Int
+	"""
+	Value of the `Handler_savepoint` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_savepoint.
+	"""
+	Handler_savepoint: Int
+	"""
+	Value of the `Handler_savepoint_rollback` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_savepoint_rollback.
+	"""
+	Handler_savepoint_rollback: Int
+	"""
+	Value of the `Handler_update` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_update.
+	"""
+	Handler_update: Int
+	"""
+	Value of the `Handler_write` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Handler_write.
+	"""
+	Handler_write: Int
+	"""
+	Value of the `Innodb_buffer_pool_bytes_data` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_bytes_data.
+	"""
+	Innodb_buffer_pool_bytes_data: Int
+	"""
+	Value of the `Innodb_buffer_pool_bytes_dirty` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_bytes_dirty.
+	"""
+	Innodb_buffer_pool_bytes_dirty: Int
+	"""
+	Value of the `Innodb_buffer_pool_dump_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_dump_status.
+	"""
+	Innodb_buffer_pool_dump_status: String
+	"""
+	Value of the `Innodb_buffer_pool_load_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_load_status.
+	"""
+	Innodb_buffer_pool_load_status: String
+	"""
+	Value of the `Innodb_buffer_pool_pages_data` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_pages_data.
+	"""
+	Innodb_buffer_pool_pages_data: Int
+	"""
+	Value of the `Innodb_buffer_pool_pages_dirty` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_pages_dirty.
+	"""
+	Innodb_buffer_pool_pages_dirty: Int
+	"""
+	Value of the `Innodb_buffer_pool_pages_flushed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_pages_flushed.
+	"""
+	Innodb_buffer_pool_pages_flushed: Int
+	"""
+	Value of the `Innodb_buffer_pool_pages_free` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_pages_free.
+	"""
+	Innodb_buffer_pool_pages_free: Int
+	"""
+	Value of the `Innodb_buffer_pool_pages_latched` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_pages_latched.
+	"""
+	Innodb_buffer_pool_pages_latched: Int
+	"""
+	Value of the `Innodb_buffer_pool_pages_misc` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_pages_misc.
+	"""
+	Innodb_buffer_pool_pages_misc: Int
+	"""
+	Value of the `Innodb_buffer_pool_pages_total` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_pages_total.
+	"""
+	Innodb_buffer_pool_pages_total: Int
+	"""
+	Value of the `Innodb_buffer_pool_read_ahead` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_read_ahead.
+	"""
+	Innodb_buffer_pool_read_ahead: Int
+	"""
+	Value of the `Innodb_buffer_pool_read_ahead_evicted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_read_ahead_evicted.
+	"""
+	Innodb_buffer_pool_read_ahead_evicted: Int
+	"""
+	Value of the `Innodb_buffer_pool_read_ahead_rnd` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_read_ahead_rnd.
+	"""
+	Innodb_buffer_pool_read_ahead_rnd: Int
+	"""
+	Value of the `Innodb_buffer_pool_read_requests` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_read_requests.
+	"""
+	Innodb_buffer_pool_read_requests: Int
+	"""
+	Value of the `Innodb_buffer_pool_reads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_reads.
+	"""
+	Innodb_buffer_pool_reads: Int
+	"""
+	Value of the `Innodb_buffer_pool_resize_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_resize_status.
+	"""
+	Innodb_buffer_pool_resize_status: String
+	"""
+	Value of the `Innodb_buffer_pool_wait_free` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_wait_free.
+	"""
+	Innodb_buffer_pool_wait_free: Int
+	"""
+	Value of the `Innodb_buffer_pool_write_requests` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_buffer_pool_write_requests.
+	"""
+	Innodb_buffer_pool_write_requests: Int
+	"""
+	Value of the `Innodb_data_fsyncs` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_fsyncs.
+	"""
+	Innodb_data_fsyncs: Int
+	"""
+	Value of the `Innodb_data_pending_fsyncs` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_pending_fsyncs.
+	"""
+	Innodb_data_pending_fsyncs: Int
+	"""
+	Value of the `Innodb_data_pending_reads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_pending_reads.
+	"""
+	Innodb_data_pending_reads: Int
+	"""
+	Value of the `Innodb_data_pending_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_pending_writes.
+	"""
+	Innodb_data_pending_writes: Int
+	"""
+	Value of the `Innodb_data_read` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_read.
+	"""
+	Innodb_data_read: Int
+	"""
+	Value of the `Innodb_data_reads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_reads.
+	"""
+	Innodb_data_reads: Int
+	"""
+	Value of the `Innodb_data_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_writes.
+	"""
+	Innodb_data_writes: Int
+	"""
+	Value of the `Innodb_data_written` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_data_written.
+	"""
+	Innodb_data_written: Int
+	"""
+	Value of the `Innodb_dblwr_pages_written` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_dblwr_pages_written.
+	"""
+	Innodb_dblwr_pages_written: Int
+	"""
+	Value of the `Innodb_dblwr_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_dblwr_writes.
+	"""
+	Innodb_dblwr_writes: Int
+	"""
+	Value of the `Innodb_have_atomic_builtins` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_have_atomic_builtins.
+	"""
+	Innodb_have_atomic_builtins: Int
+	"""
+	Value of the `Innodb_log_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_log_waits.
+	"""
+	Innodb_log_waits: Int
+	"""
+	Value of the `Innodb_log_write_requests` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_log_write_requests.
+	"""
+	Innodb_log_write_requests: Int
+	"""
+	Value of the `Innodb_log_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_log_writes.
+	"""
+	Innodb_log_writes: Int
+	"""
+	Value of the `Innodb_num_open_files` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_num_open_files.
+	"""
+	Innodb_num_open_files: Int
+	"""
+	Value of the `Innodb_os_log_fsyncs` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_os_log_fsyncs.
+	"""
+	Innodb_os_log_fsyncs: Int
+	"""
+	Value of the `Innodb_os_log_pending_fsyncs` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_os_log_pending_fsyncs.
+	"""
+	Innodb_os_log_pending_fsyncs: Int
+	"""
+	Value of the `Innodb_os_log_pending_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_os_log_pending_writes.
+	"""
+	Innodb_os_log_pending_writes: Int
+	"""
+	Value of the `Innodb_os_log_written` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_os_log_written.
+	"""
+	Innodb_os_log_written: Int
+	"""
+	Value of the `Innodb_page_size` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_page_size.
+	"""
+	Innodb_page_size: Int
+	"""
+	Value of the `Innodb_pages_created` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_pages_created.
+	"""
+	Innodb_pages_created: Int
+	"""
+	Value of the `Innodb_pages_read` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_pages_read.
+	"""
+	Innodb_pages_read: Int
+	"""
+	Value of the `Innodb_pages_written` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_pages_written.
+	"""
+	Innodb_pages_written: Int
+	"""
+	Value of the `Innodb_redo_log_enabled` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_redo_log_enabled.
+	"""
+	Innodb_redo_log_enabled: Boolean
+	"""
+	Value of the `Innodb_row_lock_current_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_row_lock_current_waits.
+	"""
+	Innodb_row_lock_current_waits: Int
+	"""
+	Value of the `Innodb_row_lock_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_row_lock_time.
+	"""
+	Innodb_row_lock_time: Int
+	"""
+	Value of the `Innodb_row_lock_time_avg` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_row_lock_time_avg.
+	"""
+	Innodb_row_lock_time_avg: Int
+	"""
+	Value of the `Innodb_row_lock_time_max` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_row_lock_time_max.
+	"""
+	Innodb_row_lock_time_max: Int
+	"""
+	Value of the `Innodb_row_lock_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_row_lock_waits.
+	"""
+	Innodb_row_lock_waits: Int
+	"""
+	Value of the `Innodb_rows_deleted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_rows_deleted.
+	"""
+	Innodb_rows_deleted: Int
+	"""
+	Value of the `Innodb_rows_inserted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_rows_inserted.
+	"""
+	Innodb_rows_inserted: Int
+	"""
+	Value of the `Innodb_rows_read` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_rows_read.
+	"""
+	Innodb_rows_read: Int
+	"""
+	Value of the `Innodb_rows_updated` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_rows_updated.
+	"""
+	Innodb_rows_updated: Int
+	"""
+	Value of the `Innodb_system_rows_deleted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_system_rows_deleted.
+	"""
+	Innodb_system_rows_deleted: Int
+	"""
+	Value of the `Innodb_system_rows_inserted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_system_rows_inserted.
+	"""
+	Innodb_system_rows_inserted: Int
+	"""
+	Value of the `Innodb_system_rows_read` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_system_rows_read.
+	"""
+	Innodb_system_rows_read: Int
+	"""
+	Value of the `Innodb_truncated_status_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_truncated_status_writes.
+	"""
+	Innodb_truncated_status_writes: Int
+	"""
+	Value of the `Innodb_undo_tablespaces_active` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_undo_tablespaces_active.
+	"""
+	Innodb_undo_tablespaces_active: Int
+	"""
+	Value of the `Innodb_undo_tablespaces_explicit` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_undo_tablespaces_explicit.
+	"""
+	Innodb_undo_tablespaces_explicit: Int
+	"""
+	Value of the `Innodb_undo_tablespaces_implicit` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_undo_tablespaces_implicit.
+	"""
+	Innodb_undo_tablespaces_implicit: Int
+	"""
+	Value of the `Innodb_undo_tablespaces_total` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Innodb_undo_tablespaces_total.
+	"""
+	Innodb_undo_tablespaces_total: Int
+	"""
+	Value of the `Key_blocks_not_flushed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Key_blocks_not_flushed.
+	"""
+	Key_blocks_not_flushed: Int
+	"""
+	Value of the `Key_blocks_unused` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Key_blocks_unused.
+	"""
+	Key_blocks_unused: Int
+	"""
+	Value of the `Key_blocks_used` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Key_blocks_used.
+	"""
+	Key_blocks_used: Int
+	"""
+	Value of the `Key_read_requests` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Key_read_requests.
+	"""
+	Key_read_requests: Int
+	"""
+	Value of the `Key_reads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Key_reads.
+	"""
+	Key_reads: Int
+	"""
+	Value of the `Key_write_requests` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Key_write_requests.
+	"""
+	Key_write_requests: Int
+	"""
+	Value of the `Key_writes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Key_writes.
+	"""
+	Key_writes: Int
+	"""
+	Value of the `Locked_connects` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Locked_connects.
+	"""
+	Locked_connects: Int
+	"""
+	Value of the `Max_execution_time_exceeded` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Max_execution_time_exceeded.
+	"""
+	Max_execution_time_exceeded: Int
+	"""
+	Value of the `Max_execution_time_set` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Max_execution_time_set.
+	"""
+	Max_execution_time_set: Int
+	"""
+	Value of the `Max_execution_time_set_failed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Max_execution_time_set_failed.
+	"""
+	Max_execution_time_set_failed: Int
+	"""
+	Value of the `Max_used_connections` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Max_used_connections.
+	"""
+	Max_used_connections: Int
+	"""
+	Value of the `Max_used_connections_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Max_used_connections_time.
+	"""
+	Max_used_connections_time: String
+	"""
+	Value of the `mecab_charset` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_mecab_charset.
+	"""
+	mecab_charset: String
+	"""
+	Value of the `Mysqlx_aborted_clients` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_aborted_clients.
+	"""
+	Mysqlx_aborted_clients: Int
+	"""
+	Value of the `Mysqlx_address` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_address.
+	"""
+	Mysqlx_address: String
+	"""
+	Value of the `Mysqlx_bytes_received` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_bytes_received.
+	"""
+	Mysqlx_bytes_received: Int
+	"""
+	Value of the `Mysqlx_bytes_received_compressed_payload` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_bytes_received_compressed_payload.
+	"""
+	Mysqlx_bytes_received_compressed_payload: Int
+	"""
+	Value of the `Mysqlx_bytes_received_uncompressed_frame` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_bytes_received_uncompressed_frame.
+	"""
+	Mysqlx_bytes_received_uncompressed_frame: Int
+	"""
+	Value of the `Mysqlx_bytes_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_bytes_sent.
+	"""
+	Mysqlx_bytes_sent: Int
+	"""
+	Value of the `Mysqlx_bytes_sent_compressed_payload` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_bytes_sent_compressed_payload.
+	"""
+	Mysqlx_bytes_sent_compressed_payload: Int
+	"""
+	Value of the `Mysqlx_bytes_sent_uncompressed_frame` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_bytes_sent_uncompressed_frame.
+	"""
+	Mysqlx_bytes_sent_uncompressed_frame: Int
+	"""
+	Value of the `Mysqlx_connection_accept_errors` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_connection_accept_errors.
+	"""
+	Mysqlx_connection_accept_errors: Int
+	"""
+	Value of the `Mysqlx_connection_errors` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_connection_errors.
+	"""
+	Mysqlx_connection_errors: Int
+	"""
+	Value of the `Mysqlx_connections_accepted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_connections_accepted.
+	"""
+	Mysqlx_connections_accepted: Int
+	"""
+	Value of the `Mysqlx_connections_closed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_connections_closed.
+	"""
+	Mysqlx_connections_closed: Int
+	"""
+	Value of the `Mysqlx_connections_rejected` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_connections_rejected.
+	"""
+	Mysqlx_connections_rejected: Int
+	"""
+	Value of the `Mysqlx_crud_create_view` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_crud_create_view.
+	"""
+	Mysqlx_crud_create_view: Int
+	"""
+	Value of the `Mysqlx_crud_delete` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_crud_delete.
+	"""
+	Mysqlx_crud_delete: Int
+	"""
+	Value of the `Mysqlx_crud_drop_view` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_crud_drop_view.
+	"""
+	Mysqlx_crud_drop_view: Int
+	"""
+	Value of the `Mysqlx_crud_find` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_crud_find.
+	"""
+	Mysqlx_crud_find: Int
+	"""
+	Value of the `Mysqlx_crud_insert` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_crud_insert.
+	"""
+	Mysqlx_crud_insert: Int
+	"""
+	Value of the `Mysqlx_crud_modify_view` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_crud_modify_view.
+	"""
+	Mysqlx_crud_modify_view: Int
+	"""
+	Value of the `Mysqlx_crud_update` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_crud_update.
+	"""
+	Mysqlx_crud_update: Int
+	"""
+	Value of the `Mysqlx_cursor_close` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_cursor_close.
+	"""
+	Mysqlx_cursor_close: Int
+	"""
+	Value of the `Mysqlx_cursor_fetch` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_cursor_fetch.
+	"""
+	Mysqlx_cursor_fetch: Int
+	"""
+	Value of the `Mysqlx_cursor_open` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_cursor_open.
+	"""
+	Mysqlx_cursor_open: Int
+	"""
+	Value of the `Mysqlx_errors_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_errors_sent.
+	"""
+	Mysqlx_errors_sent: Int
+	"""
+	Value of the `Mysqlx_errors_unknown_message_type` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_errors_unknown_message_type.
+	"""
+	Mysqlx_errors_unknown_message_type: Int
+	"""
+	Value of the `Mysqlx_expect_close` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_expect_close.
+	"""
+	Mysqlx_expect_close: Int
+	"""
+	Value of the `Mysqlx_expect_open` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_expect_open.
+	"""
+	Mysqlx_expect_open: Int
+	"""
+	Value of the `Mysqlx_init_error` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_init_error.
+	"""
+	Mysqlx_init_error: Int
+	"""
+	Value of the `Mysqlx_messages_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_messages_sent.
+	"""
+	Mysqlx_messages_sent: Int
+	"""
+	Value of the `Mysqlx_notice_global_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_notice_global_sent.
+	"""
+	Mysqlx_notice_global_sent: Int
+	"""
+	Value of the `Mysqlx_notice_other_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_notice_other_sent.
+	"""
+	Mysqlx_notice_other_sent: Int
+	"""
+	Value of the `Mysqlx_notice_warning_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_notice_warning_sent.
+	"""
+	Mysqlx_notice_warning_sent: Int
+	"""
+	Value of the `Mysqlx_notified_by_group_replication` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_notified_by_group_replication.
+	"""
+	Mysqlx_notified_by_group_replication: Int
+	"""
+	Value of the `Mysqlx_port` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_port.
+	"""
+	Mysqlx_port: String
+	"""
+	Value of the `Mysqlx_prep_deallocate` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_prep_deallocate.
+	"""
+	Mysqlx_prep_deallocate: Int
+	"""
+	Value of the `Mysqlx_prep_execute` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_prep_execute.
+	"""
+	Mysqlx_prep_execute: Int
+	"""
+	Value of the `Mysqlx_prep_prepare` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_prep_prepare.
+	"""
+	Mysqlx_prep_prepare: Int
+	"""
+	Value of the `Mysqlx_rows_sent` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_rows_sent.
+	"""
+	Mysqlx_rows_sent: Int
+	"""
+	Value of the `Mysqlx_sessions` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_sessions.
+	"""
+	Mysqlx_sessions: Int
+	"""
+	Value of the `Mysqlx_sessions_accepted` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_sessions_accepted.
+	"""
+	Mysqlx_sessions_accepted: Int
+	"""
+	Value of the `Mysqlx_sessions_closed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_sessions_closed.
+	"""
+	Mysqlx_sessions_closed: Int
+	"""
+	Value of the `Mysqlx_sessions_fatal_error` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_sessions_fatal_error.
+	"""
+	Mysqlx_sessions_fatal_error: Int
+	"""
+	Value of the `Mysqlx_sessions_killed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_sessions_killed.
+	"""
+	Mysqlx_sessions_killed: Int
+	"""
+	Value of the `Mysqlx_sessions_rejected` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_sessions_rejected.
+	"""
+	Mysqlx_sessions_rejected: Int
+	"""
+	Value of the `Mysqlx_socket` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_socket.
+	"""
+	Mysqlx_socket: String
+	"""
+	Value of the `Mysqlx_ssl_accept_renegotiates` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_accept_renegotiates.
+	"""
+	Mysqlx_ssl_accept_renegotiates: Int
+	"""
+	Value of the `Mysqlx_ssl_accepts` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_accepts.
+	"""
+	Mysqlx_ssl_accepts: Int
+	"""
+	Value of the `Mysqlx_ssl_active` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_active.
+	"""
+	Mysqlx_ssl_active: Int
+	"""
+	Value of the `Mysqlx_ssl_cipher` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_cipher.
+	"""
+	Mysqlx_ssl_cipher: Int
+	"""
+	Value of the `Mysqlx_ssl_cipher_list` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_cipher_list.
+	"""
+	Mysqlx_ssl_cipher_list: Int
+	"""
+	Value of the `Mysqlx_ssl_ctx_verify_depth` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_ctx_verify_depth.
+	"""
+	Mysqlx_ssl_ctx_verify_depth: Int
+	"""
+	Value of the `Mysqlx_ssl_ctx_verify_mode` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_ctx_verify_mode.
+	"""
+	Mysqlx_ssl_ctx_verify_mode: Int
+	"""
+	Value of the `Mysqlx_ssl_finished_accepts` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_finished_accepts.
+	"""
+	Mysqlx_ssl_finished_accepts: Int
+	"""
+	Value of the `Mysqlx_ssl_server_not_after` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_server_not_after.
+	"""
+	Mysqlx_ssl_server_not_after: Int
+	"""
+	Value of the `Mysqlx_ssl_server_not_before` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_server_not_before.
+	"""
+	Mysqlx_ssl_server_not_before: Int
+	"""
+	Value of the `Mysqlx_ssl_verify_depth` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_verify_depth.
+	"""
+	Mysqlx_ssl_verify_depth: Int
+	"""
+	Value of the `Mysqlx_ssl_verify_mode` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_verify_mode.
+	"""
+	Mysqlx_ssl_verify_mode: Int
+	"""
+	Value of the `Mysqlx_ssl_version` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_ssl_version.
+	"""
+	Mysqlx_ssl_version: Int
+	"""
+	Value of the `Mysqlx_stmt_create_collection` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_create_collection.
+	"""
+	Mysqlx_stmt_create_collection: Int
+	"""
+	Value of the `Mysqlx_stmt_create_collection_index` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_create_collection_index.
+	"""
+	Mysqlx_stmt_create_collection_index: Int
+	"""
+	Value of the `Mysqlx_stmt_disable_notices` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_disable_notices.
+	"""
+	Mysqlx_stmt_disable_notices: Int
+	"""
+	Value of the `Mysqlx_stmt_drop_collection` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_drop_collection.
+	"""
+	Mysqlx_stmt_drop_collection: Int
+	"""
+	Value of the `Mysqlx_stmt_drop_collection_index` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_drop_collection_index.
+	"""
+	Mysqlx_stmt_drop_collection_index: Int
+	"""
+	Value of the `Mysqlx_stmt_enable_notices` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_enable_notices.
+	"""
+	Mysqlx_stmt_enable_notices: Int
+	"""
+	Value of the `Mysqlx_stmt_ensure_collection` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_ensure_collection.
+	"""
+	Mysqlx_stmt_ensure_collection: String
+	"""
+	Value of the `Mysqlx_stmt_execute_mysqlx` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_execute_mysqlx.
+	"""
+	Mysqlx_stmt_execute_mysqlx: Int
+	"""
+	Value of the `Mysqlx_stmt_execute_sql` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_execute_sql.
+	"""
+	Mysqlx_stmt_execute_sql: Int
+	"""
+	Value of the `Mysqlx_stmt_execute_xplugin` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_execute_xplugin.
+	"""
+	Mysqlx_stmt_execute_xplugin: Int
+	"""
+	Value of the `Mysqlx_stmt_get_collection_options` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_get_collection_options.
+	"""
+	Mysqlx_stmt_get_collection_options: Int
+	"""
+	Value of the `Mysqlx_stmt_kill_client` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_kill_client.
+	"""
+	Mysqlx_stmt_kill_client: Int
+	"""
+	Value of the `Mysqlx_stmt_list_clients` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_list_clients.
+	"""
+	Mysqlx_stmt_list_clients: Int
+	"""
+	Value of the `Mysqlx_stmt_list_notices` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_list_notices.
+	"""
+	Mysqlx_stmt_list_notices: Int
+	"""
+	Value of the `Mysqlx_stmt_list_objects` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_list_objects.
+	"""
+	Mysqlx_stmt_list_objects: Int
+	"""
+	Value of the `Mysqlx_stmt_modify_collection_options` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_modify_collection_options.
+	"""
+	Mysqlx_stmt_modify_collection_options: Int
+	"""
+	Value of the `Mysqlx_stmt_ping` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_stmt_ping.
+	"""
+	Mysqlx_stmt_ping: Int
+	"""
+	Value of the `Mysqlx_worker_threads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_worker_threads.
+	"""
+	Mysqlx_worker_threads: Int
+	"""
+	Value of the `Mysqlx_worker_threads_active` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/x-plugin-status-variables.html#statvar_Mysqlx_worker_threads_active.
+	"""
+	Mysqlx_worker_threads_active: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_deferred_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_deferred_count.
+	"""
+	Ndb_api_adaptive_send_deferred_count: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_deferred_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_deferred_count_replica.
+	"""
+	Ndb_api_adaptive_send_deferred_count_replica: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_deferred_count_session` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_deferred_count_session.
+	"""
+	Ndb_api_adaptive_send_deferred_count_session: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_deferred_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_deferred_count_slave.
+	"""
+	Ndb_api_adaptive_send_deferred_count_slave: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_forced_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_forced_count.
+	"""
+	Ndb_api_adaptive_send_forced_count: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_forced_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_forced_count_replica.
+	"""
+	Ndb_api_adaptive_send_forced_count_replica: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_forced_count_session` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_forced_count_session.
+	"""
+	Ndb_api_adaptive_send_forced_count_session: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_forced_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_forced_count_slave.
+	"""
+	Ndb_api_adaptive_send_forced_count_slave: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_unforced_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_unforced_count.
+	"""
+	Ndb_api_adaptive_send_unforced_count: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_unforced_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_unforced_count_replica.
+	"""
+	Ndb_api_adaptive_send_unforced_count_replica: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_unforced_count_session` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_unforced_count_session.
+	"""
+	Ndb_api_adaptive_send_unforced_count_session: Int
+	"""
+	Value of the `Ndb_api_adaptive_send_unforced_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_adaptive_send_unforced_count_slave.
+	"""
+	Ndb_api_adaptive_send_unforced_count_slave: Int
+	"""
+	Value of the `Ndb_api_bytes_received_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_bytes_received_count.
+	"""
+	Ndb_api_bytes_received_count: Int
+	"""
+	Value of the `Ndb_api_bytes_received_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_bytes_received_count_replica.
+	"""
+	Ndb_api_bytes_received_count_replica: Int
+	"""
+	Value of the `Ndb_api_bytes_received_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_bytes_received_count_slave.
+	"""
+	Ndb_api_bytes_received_count_slave: Int
+	"""
+	Value of the `Ndb_api_bytes_sent_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_bytes_sent_count.
+	"""
+	Ndb_api_bytes_sent_count: Int
+	"""
+	Value of the `Ndb_api_bytes_sent_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_bytes_sent_count_replica.
+	"""
+	Ndb_api_bytes_sent_count_replica: Int
+	"""
+	Value of the `Ndb_api_bytes_sent_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_bytes_sent_count_slave.
+	"""
+	Ndb_api_bytes_sent_count_slave: Int
+	"""
+	Value of the `Ndb_api_event_bytes_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_event_bytes_count.
+	"""
+	Ndb_api_event_bytes_count: Int
+	"""
+	Value of the `Ndb_api_event_bytes_count_injector` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_event_bytes_count_injector.
+	"""
+	Ndb_api_event_bytes_count_injector: Int
+	"""
+	Value of the `Ndb_api_event_data_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_event_data_count.
+	"""
+	Ndb_api_event_data_count: Int
+	"""
+	Value of the `Ndb_api_event_data_count_injector` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_event_data_count_injector.
+	"""
+	Ndb_api_event_data_count_injector: Int
+	"""
+	Value of the `Ndb_api_event_nondata_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_event_nondata_count.
+	"""
+	Ndb_api_event_nondata_count: Int
+	"""
+	Value of the `Ndb_api_event_nondata_count_injector` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_event_nondata_count_injector.
+	"""
+	Ndb_api_event_nondata_count_injector: Int
+	"""
+	Value of the `Ndb_api_pk_op_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_pk_op_count.
+	"""
+	Ndb_api_pk_op_count: Int
+	"""
+	Value of the `Ndb_api_pk_op_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_pk_op_count_replica.
+	"""
+	Ndb_api_pk_op_count_replica: Int
+	"""
+	Value of the `Ndb_api_pk_op_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_pk_op_count_slave.
+	"""
+	Ndb_api_pk_op_count_slave: Int
+	"""
+	Value of the `Ndb_api_pruned_scan_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_pruned_scan_count.
+	"""
+	Ndb_api_pruned_scan_count: Int
+	"""
+	Value of the `Ndb_api_pruned_scan_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_pruned_scan_count_replica.
+	"""
+	Ndb_api_pruned_scan_count_replica: Int
+	"""
+	Value of the `Ndb_api_pruned_scan_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_pruned_scan_count_slave.
+	"""
+	Ndb_api_pruned_scan_count_slave: Int
+	"""
+	Value of the `Ndb_api_range_scan_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_range_scan_count.
+	"""
+	Ndb_api_range_scan_count: Int
+	"""
+	Value of the `Ndb_api_range_scan_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_range_scan_count_replica.
+	"""
+	Ndb_api_range_scan_count_replica: Int
+	"""
+	Value of the `Ndb_api_range_scan_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_range_scan_count_slave.
+	"""
+	Ndb_api_range_scan_count_slave: Int
+	"""
+	Value of the `Ndb_api_read_row_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_read_row_count.
+	"""
+	Ndb_api_read_row_count: Int
+	"""
+	Value of the `Ndb_api_read_row_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_read_row_count_replica.
+	"""
+	Ndb_api_read_row_count_replica: Int
+	"""
+	Value of the `Ndb_api_read_row_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_read_row_count_slave.
+	"""
+	Ndb_api_read_row_count_slave: Int
+	"""
+	Value of the `Ndb_api_scan_batch_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_scan_batch_count.
+	"""
+	Ndb_api_scan_batch_count: Int
+	"""
+	Value of the `Ndb_api_scan_batch_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_scan_batch_count_replica.
+	"""
+	Ndb_api_scan_batch_count_replica: Int
+	"""
+	Value of the `Ndb_api_scan_batch_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_scan_batch_count_slave.
+	"""
+	Ndb_api_scan_batch_count_slave: Int
+	"""
+	Value of the `Ndb_api_table_scan_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_table_scan_count.
+	"""
+	Ndb_api_table_scan_count: Int
+	"""
+	Value of the `Ndb_api_table_scan_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_table_scan_count_replica.
+	"""
+	Ndb_api_table_scan_count_replica: Int
+	"""
+	Value of the `Ndb_api_table_scan_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_table_scan_count_slave.
+	"""
+	Ndb_api_table_scan_count_slave: Int
+	"""
+	Value of the `Ndb_api_trans_abort_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_abort_count.
+	"""
+	Ndb_api_trans_abort_count: Int
+	"""
+	Value of the `Ndb_api_trans_abort_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_abort_count_replica.
+	"""
+	Ndb_api_trans_abort_count_replica: Int
+	"""
+	Value of the `Ndb_api_trans_abort_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_abort_count_slave.
+	"""
+	Ndb_api_trans_abort_count_slave: Int
+	"""
+	Value of the `Ndb_api_trans_close_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_close_count.
+	"""
+	Ndb_api_trans_close_count: Int
+	"""
+	Value of the `Ndb_api_trans_close_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_close_count_replica.
+	"""
+	Ndb_api_trans_close_count_replica: Int
+	"""
+	Value of the `Ndb_api_trans_close_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_close_count_slave.
+	"""
+	Ndb_api_trans_close_count_slave: Int
+	"""
+	Value of the `Ndb_api_trans_commit_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_commit_count.
+	"""
+	Ndb_api_trans_commit_count: Int
+	"""
+	Value of the `Ndb_api_trans_commit_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_commit_count_replica.
+	"""
+	Ndb_api_trans_commit_count_replica: Int
+	"""
+	Value of the `Ndb_api_trans_commit_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_commit_count_slave.
+	"""
+	Ndb_api_trans_commit_count_slave: Int
+	"""
+	Value of the `Ndb_api_trans_local_read_row_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_local_read_row_count.
+	"""
+	Ndb_api_trans_local_read_row_count: Int
+	"""
+	Value of the `Ndb_api_trans_local_read_row_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_local_read_row_count_replica.
+	"""
+	Ndb_api_trans_local_read_row_count_replica: Int
+	"""
+	Value of the `Ndb_api_trans_local_read_row_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_local_read_row_count_slave.
+	"""
+	Ndb_api_trans_local_read_row_count_slave: Int
+	"""
+	Value of the `Ndb_api_trans_start_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_start_count.
+	"""
+	Ndb_api_trans_start_count: Int
+	"""
+	Value of the `Ndb_api_trans_start_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_start_count_replica.
+	"""
+	Ndb_api_trans_start_count_replica: Int
+	"""
+	Value of the `Ndb_api_trans_start_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_trans_start_count_slave.
+	"""
+	Ndb_api_trans_start_count_slave: Int
+	"""
+	Value of the `Ndb_api_uk_op_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_uk_op_count.
+	"""
+	Ndb_api_uk_op_count: Int
+	"""
+	Value of the `Ndb_api_uk_op_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_uk_op_count_replica.
+	"""
+	Ndb_api_uk_op_count_replica: Int
+	"""
+	Value of the `Ndb_api_uk_op_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_uk_op_count_slave.
+	"""
+	Ndb_api_uk_op_count_slave: Int
+	"""
+	Value of the `Ndb_api_wait_exec_complete_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_exec_complete_count.
+	"""
+	Ndb_api_wait_exec_complete_count: Int
+	"""
+	Value of the `Ndb_api_wait_exec_complete_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_exec_complete_count_replica.
+	"""
+	Ndb_api_wait_exec_complete_count_replica: Int
+	"""
+	Value of the `Ndb_api_wait_exec_complete_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_exec_complete_count_slave.
+	"""
+	Ndb_api_wait_exec_complete_count_slave: Int
+	"""
+	Value of the `Ndb_api_wait_meta_request_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_meta_request_count.
+	"""
+	Ndb_api_wait_meta_request_count: Int
+	"""
+	Value of the `Ndb_api_wait_meta_request_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_meta_request_count_replica.
+	"""
+	Ndb_api_wait_meta_request_count_replica: Int
+	"""
+	Value of the `Ndb_api_wait_meta_request_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_meta_request_count_slave.
+	"""
+	Ndb_api_wait_meta_request_count_slave: Int
+	"""
+	Value of the `Ndb_api_wait_nanos_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_nanos_count.
+	"""
+	Ndb_api_wait_nanos_count: Int
+	"""
+	Value of the `Ndb_api_wait_nanos_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_nanos_count_replica.
+	"""
+	Ndb_api_wait_nanos_count_replica: Int
+	"""
+	Value of the `Ndb_api_wait_nanos_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_nanos_count_slave.
+	"""
+	Ndb_api_wait_nanos_count_slave: Int
+	"""
+	Value of the `Ndb_api_wait_scan_result_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_scan_result_count.
+	"""
+	Ndb_api_wait_scan_result_count: Int
+	"""
+	Value of the `Ndb_api_wait_scan_result_count_replica` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_scan_result_count_replica.
+	"""
+	Ndb_api_wait_scan_result_count_replica: Int
+	"""
+	Value of the `Ndb_api_wait_scan_result_count_slave` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_api_wait_scan_result_count_slave.
+	"""
+	Ndb_api_wait_scan_result_count_slave: Int
+	"""
+	Value of the `Ndb_cluster_node_id` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_cluster_node_id.
+	"""
+	Ndb_cluster_node_id: Int
+	"""
+	Value of the `Ndb_config_from_host` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_config_from_host.
+	"""
+	Ndb_config_from_host: Int
+	"""
+	Value of the `Ndb_config_from_port` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_config_from_port.
+	"""
+	Ndb_config_from_port: Int
+	"""
+	Value of the `Ndb_config_generation` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_config_generation.
+	"""
+	Ndb_config_generation: Int
+	"""
+	Value of the `Ndb_conflict_fn_epoch` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_fn_epoch.
+	"""
+	Ndb_conflict_fn_epoch: Int
+	"""
+	Value of the `Ndb_conflict_fn_epoch_trans` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_fn_epoch_trans.
+	"""
+	Ndb_conflict_fn_epoch_trans: Int
+	"""
+	Value of the `Ndb_conflict_fn_epoch2` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_fn_epoch2.
+	"""
+	Ndb_conflict_fn_epoch2: Int
+	"""
+	Value of the `Ndb_conflict_fn_epoch2_trans` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_fn_epoch2_trans.
+	"""
+	Ndb_conflict_fn_epoch2_trans: Int
+	"""
+	Value of the `Ndb_conflict_fn_max` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_fn_max.
+	"""
+	Ndb_conflict_fn_max: Int
+	"""
+	Value of the `Ndb_conflict_fn_old` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_fn_old.
+	"""
+	Ndb_conflict_fn_old: Int
+	"""
+	Value of the `Ndb_conflict_last_stable_epoch` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_last_stable_epoch.
+	"""
+	Ndb_conflict_last_stable_epoch: Int
+	"""
+	Value of the `Ndb_conflict_reflected_op_discard_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_reflected_op_discard_count.
+	"""
+	Ndb_conflict_reflected_op_discard_count: Int
+	"""
+	Value of the `Ndb_conflict_reflected_op_prepare_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_reflected_op_prepare_count.
+	"""
+	Ndb_conflict_reflected_op_prepare_count: Int
+	"""
+	Value of the `Ndb_conflict_refresh_op_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_refresh_op_count.
+	"""
+	Ndb_conflict_refresh_op_count: Int
+	"""
+	Value of the `Ndb_conflict_trans_conflict_commit_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_trans_conflict_commit_count.
+	"""
+	Ndb_conflict_trans_conflict_commit_count: Int
+	"""
+	Value of the `Ndb_conflict_trans_detect_iter_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_trans_detect_iter_count.
+	"""
+	Ndb_conflict_trans_detect_iter_count: Int
+	"""
+	Value of the `Ndb_conflict_trans_reject_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_trans_reject_count.
+	"""
+	Ndb_conflict_trans_reject_count: Int
+	"""
+	Value of the `Ndb_conflict_trans_row_conflict_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_trans_row_conflict_count.
+	"""
+	Ndb_conflict_trans_row_conflict_count: Int
+	"""
+	Value of the `Ndb_conflict_trans_row_reject_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_conflict_trans_row_reject_count.
+	"""
+	Ndb_conflict_trans_row_reject_count: Int
+	"""
+	Value of the `Ndb_epoch_delete_delete_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_epoch_delete_delete_count.
+	"""
+	Ndb_epoch_delete_delete_count: Int
+	"""
+	Value of the `Ndb_execute_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_execute_count.
+	"""
+	Ndb_execute_count: Int
+	"""
+	Value of the `Ndb_last_commit_epoch_server` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_last_commit_epoch_server.
+	"""
+	Ndb_last_commit_epoch_server: Int
+	"""
+	Value of the `Ndb_metadata_blacklist_size` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_metadata_excluded_count.
+	"""
+	Ndb_metadata_blacklist_size: Int
+	"""
+	Value of the `Ndb_metadata_detected_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_metadata_detected_count.
+	"""
+	Ndb_metadata_detected_count: Int
+	"""
+	Value of the `Ndb_metadata_excluded_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_metadata_excluded_count.
+	"""
+	Ndb_metadata_excluded_count: Int
+	"""
+	Value of the `Ndb_metadata_synced_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_metadata_synced_count.
+	"""
+	Ndb_metadata_synced_count: Int
+	"""
+	Value of the `Ndb_cluster_node_id` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_cluster_node_id.
+	"""
+	Ndb_cluster_node_id: Int
+	"""
+	Value of the `Ndb_number_of_data_nodes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_number_of_data_nodes.
+	"""
+	Ndb_number_of_data_nodes: Int
+	"""
+	Value of the `Ndb_pruned_scan_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_pruned_scan_count.
+	"""
+	Ndb_pruned_scan_count: Int
+	"""
+	Value of the `Ndb_pushed_queries_defined` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_pushed_queries_defined.
+	"""
+	Ndb_pushed_queries_defined: Int
+	"""
+	Value of the `Ndb_pushed_queries_dropped` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_pushed_queries_dropped.
+	"""
+	Ndb_pushed_queries_dropped: Int
+	"""
+	Value of the `Ndb_pushed_queries_executed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_pushed_queries_executed.
+	"""
+	Ndb_pushed_queries_executed: Int
+	"""
+	Value of the `Ndb_pushed_reads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_pushed_reads.
+	"""
+	Ndb_pushed_reads: Int
+	"""
+	Value of the `Ndb_scan_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_scan_count.
+	"""
+	Ndb_scan_count: Int
+	"""
+	Value of the `Ndb_trans_hint_count_session` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster-options-variables.html#statvar_Ndb_trans_hint_count_session.
+	"""
+	Ndb_trans_hint_count_session: Int
+	"""
+	Value of the `Not_flushed_delayed_rows` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Not_flushed_delayed_rows.
+	"""
+	Not_flushed_delayed_rows: Int
+	"""
+	Value of the `Ongoing_anonymous_gtid_violating_transaction_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ongoing_anonymous_gtid_violating_transaction_count.
+	"""
+	Ongoing_anonymous_gtid_violating_transaction_count: Int
+	"""
+	Value of the `Ongoing_anonymous_transaction_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ongoing_anonymous_transaction_count.
+	"""
+	Ongoing_anonymous_transaction_count: Int
+	"""
+	Value of the `Ongoing_automatic_gtid_violating_transaction_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ongoing_automatic_gtid_violating_transaction_count.
+	"""
+	Ongoing_automatic_gtid_violating_transaction_count: Int
+	"""
+	Value of the `Open_files` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Open_files.
+	"""
+	Open_files: Int
+	"""
+	Value of the `Open_streams` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Open_streams.
+	"""
+	Open_streams: Int
+	"""
+	Value of the `Open_table_definitions` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Open_table_definitions.
+	"""
+	Open_table_definitions: Int
+	"""
+	Value of the `Open_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Open_tables.
+	"""
+	Open_tables: Int
+	"""
+	Value of the `Opened_files` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Opened_files.
+	"""
+	Opened_files: Int
+	"""
+	Value of the `Opened_table_definitions` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Opened_table_definitions.
+	"""
+	Opened_table_definitions: Int
+	"""
+	Value of the `Opened_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Opened_tables.
+	"""
+	Opened_tables: Int
+	"""
+	Value of the `Performance_schema_accounts_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_accounts_lost.
+	"""
+	Performance_schema_accounts_lost: Int
+	"""
+	Value of the `Performance_schema_cond_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_cond_classes_lost.
+	"""
+	Performance_schema_cond_classes_lost: Int
+	"""
+	Value of the `Performance_schema_cond_instances_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_cond_instances_lost.
+	"""
+	Performance_schema_cond_instances_lost: Int
+	"""
+	Value of the `Performance_schema_digest_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_digest_lost.
+	"""
+	Performance_schema_digest_lost: Int
+	"""
+	Value of the `Performance_schema_file_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_file_classes_lost.
+	"""
+	Performance_schema_file_classes_lost: Int
+	"""
+	Value of the `Performance_schema_file_handles_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_file_handles_lost.
+	"""
+	Performance_schema_file_handles_lost: Int
+	"""
+	Value of the `Performance_schema_file_instances_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_file_instances_lost.
+	"""
+	Performance_schema_file_instances_lost: Int
+	"""
+	Value of the `Performance_schema_hosts_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_hosts_lost.
+	"""
+	Performance_schema_hosts_lost: Int
+	"""
+	Value of the `Performance_schema_index_stat_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_index_stat_lost.
+	"""
+	Performance_schema_index_stat_lost: Int
+	"""
+	Value of the `Performance_schema_locker_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_locker_lost.
+	"""
+	Performance_schema_locker_lost: Int
+	"""
+	Value of the `Performance_schema_memory_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_memory_classes_lost.
+	"""
+	Performance_schema_memory_classes_lost: Int
+	"""
+	Value of the `Performance_schema_metadata_lock_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_metadata_lock_lost.
+	"""
+	Performance_schema_metadata_lock_lost: Int
+	"""
+	Value of the `Performance_schema_mutex_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_mutex_classes_lost.
+	"""
+	Performance_schema_mutex_classes_lost: Int
+	"""
+	Value of the `Performance_schema_mutex_instances_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_mutex_instances_lost.
+	"""
+	Performance_schema_mutex_instances_lost: Int
+	"""
+	Value of the `Performance_schema_nested_statement_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_nested_statement_lost.
+	"""
+	Performance_schema_nested_statement_lost: Int
+	"""
+	Value of the `Performance_schema_prepared_statements_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_prepared_statements_lost.
+	"""
+	Performance_schema_prepared_statements_lost: Int
+	"""
+	Value of the `Performance_schema_program_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_program_lost.
+	"""
+	Performance_schema_program_lost: Int
+	"""
+	Value of the `Performance_schema_rwlock_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_rwlock_classes_lost.
+	"""
+	Performance_schema_rwlock_classes_lost: Int
+	"""
+	Value of the `Performance_schema_rwlock_instances_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_rwlock_instances_lost.
+	"""
+	Performance_schema_rwlock_instances_lost: Int
+	"""
+	Value of the `Performance_schema_session_connect_attrs_longest_seen` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_session_connect_attrs_longest_seen.
+	"""
+	Performance_schema_session_connect_attrs_longest_seen: Int
+	"""
+	Value of the `Performance_schema_session_connect_attrs_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_session_connect_attrs_lost.
+	"""
+	Performance_schema_session_connect_attrs_lost: Int
+	"""
+	Value of the `Performance_schema_socket_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_socket_classes_lost.
+	"""
+	Performance_schema_socket_classes_lost: Int
+	"""
+	Value of the `Performance_schema_socket_instances_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_socket_instances_lost.
+	"""
+	Performance_schema_socket_instances_lost: Int
+	"""
+	Value of the `Performance_schema_stage_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_stage_classes_lost.
+	"""
+	Performance_schema_stage_classes_lost: Int
+	"""
+	Value of the `Performance_schema_statement_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_statement_classes_lost.
+	"""
+	Performance_schema_statement_classes_lost: Int
+	"""
+	Value of the `Performance_schema_table_handles_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_table_handles_lost.
+	"""
+	Performance_schema_table_handles_lost: Int
+	"""
+	Value of the `Performance_schema_table_instances_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_table_instances_lost.
+	"""
+	Performance_schema_table_instances_lost: Int
+	"""
+	Value of the `Performance_schema_table_lock_stat_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_table_lock_stat_lost.
+	"""
+	Performance_schema_table_lock_stat_lost: Int
+	"""
+	Value of the `Performance_schema_thread_classes_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_thread_classes_lost.
+	"""
+	Performance_schema_thread_classes_lost: Int
+	"""
+	Value of the `Performance_schema_thread_instances_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_thread_instances_lost.
+	"""
+	Performance_schema_thread_instances_lost: Int
+	"""
+	Value of the `Performance_schema_users_lost` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/performance-schema-status-variables.html#statvar_Performance_schema_users_lost.
+	"""
+	Performance_schema_users_lost: Int
+	"""
+	Value of the `Prepared_stmt_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Prepared_stmt_count.
+	"""
+	Prepared_stmt_count: Int
+	"""
+	Value of the `Queries` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Queries.
+	"""
+	Queries: Int
+	"""
+	Value of the `Questions` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Questions.
+	"""
+	Questions: Int
+	"""
+	Value of the `Replica_open_temp_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Replica_open_temp_tables.
+	"""
+	Replica_open_temp_tables: Int
+	"""
+	Value of the `Replica_rows_last_search_algorithm_used` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Replica_rows_last_search_algorithm_used.
+	"""
+	Replica_rows_last_search_algorithm_used: String
+	"""
+	Value of the `Rewriter_number_loaded_rules` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/rewriter-query-rewrite-plugin-reference.html#statvar_Rewriter_number_loaded_rules.
+	"""
+	Rewriter_number_loaded_rules: Int
+	"""
+	Value of the `Rewriter_number_reloads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/rewriter-query-rewrite-plugin-reference.html#statvar_Rewriter_number_reloads.
+	"""
+	Rewriter_number_reloads: Int
+	"""
+	Value of the `Rewriter_number_rewritten_queries` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/rewriter-query-rewrite-plugin-reference.html#statvar_Rewriter_number_rewritten_queries.
+	"""
+	Rewriter_number_rewritten_queries: Int
+	"""
+	Value of the `Rewriter_reload_error` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/rewriter-query-rewrite-plugin-reference.html#statvar_Rewriter_reload_error.
+	"""
+	Rewriter_reload_error: Boolean
+	"""
+	Value of the `Rpl_semi_sync_master_clients` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_clients.
+	"""
+	Rpl_semi_sync_master_clients: Int
+	"""
+	Value of the `Rpl_semi_sync_master_net_avg_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_net_avg_wait_time.
+	"""
+	Rpl_semi_sync_master_net_avg_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_master_net_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_net_wait_time.
+	"""
+	Rpl_semi_sync_master_net_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_master_net_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_net_waits.
+	"""
+	Rpl_semi_sync_master_net_waits: Int
+	"""
+	Value of the `Rpl_semi_sync_master_no_times` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_no_times.
+	"""
+	Rpl_semi_sync_master_no_times: Int
+	"""
+	Value of the `Rpl_semi_sync_master_no_tx` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_no_tx.
+	"""
+	Rpl_semi_sync_master_no_tx: Int
+	"""
+	Value of the `Rpl_semi_sync_master_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_status.
+	"""
+	Rpl_semi_sync_master_status: Boolean
+	"""
+	Value of the `Rpl_semi_sync_master_timefunc_failures` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_timefunc_failures.
+	"""
+	Rpl_semi_sync_master_timefunc_failures: Int
+	"""
+	Value of the `Rpl_semi_sync_master_tx_avg_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_tx_avg_wait_time.
+	"""
+	Rpl_semi_sync_master_tx_avg_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_master_tx_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_tx_wait_time.
+	"""
+	Rpl_semi_sync_master_tx_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_master_tx_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_tx_waits.
+	"""
+	Rpl_semi_sync_master_tx_waits: Int
+	"""
+	Value of the `Rpl_semi_sync_master_wait_pos_backtraverse` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_wait_pos_backtraverse.
+	"""
+	Rpl_semi_sync_master_wait_pos_backtraverse: Int
+	"""
+	Value of the `Rpl_semi_sync_master_wait_sessions` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_wait_sessions.
+	"""
+	Rpl_semi_sync_master_wait_sessions: Int
+	"""
+	Value of the `Rpl_semi_sync_master_yes_tx` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_yes_tx.
+	"""
+	Rpl_semi_sync_master_yes_tx: Int
+	"""
+	Value of the `Rpl_semi_sync_replica_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_replica_status.
+	"""
+	Rpl_semi_sync_replica_status: Boolean
+	"""
+	Value of the `Rpl_semi_sync_slave_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_slave_status.
+	"""
+	Rpl_semi_sync_slave_status: Boolean
+	"""
+	Value of the `Rpl_semi_sync_source_clients` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_clients.
+	"""
+	Rpl_semi_sync_source_clients: Int
+	"""
+	Value of the `Rpl_semi_sync_source_net_avg_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_net_avg_wait_time.
+	"""
+	Rpl_semi_sync_source_net_avg_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_source_net_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_net_wait_time.
+	"""
+	Rpl_semi_sync_source_net_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_source_net_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_net_waits.
+	"""
+	Rpl_semi_sync_source_net_waits: Int
+	"""
+	Value of the `Rpl_semi_sync_source_no_times` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_no_times.
+	"""
+	Rpl_semi_sync_source_no_times: Int
+	"""
+	Value of the `Rpl_semi_sync_source_no_tx` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_no_tx.
+	"""
+	Rpl_semi_sync_source_no_tx: Int
+	"""
+	Value of the `Rpl_semi_sync_source_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_status.
+	"""
+	Rpl_semi_sync_source_status: Boolean
+	"""
+	Value of the `Rpl_semi_sync_source_timefunc_failures` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_timefunc_failures.
+	"""
+	Rpl_semi_sync_source_timefunc_failures: Int
+	"""
+	Value of the `Rpl_semi_sync_source_tx_avg_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_tx_avg_wait_time.
+	"""
+	Rpl_semi_sync_source_tx_avg_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_source_tx_wait_time` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_tx_wait_time.
+	"""
+	Rpl_semi_sync_source_tx_wait_time: Int
+	"""
+	Value of the `Rpl_semi_sync_source_tx_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_tx_waits.
+	"""
+	Rpl_semi_sync_source_tx_waits: Int
+	"""
+	Value of the `Rpl_semi_sync_source_wait_pos_backtraverse` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_wait_pos_backtraverse.
+	"""
+	Rpl_semi_sync_source_wait_pos_backtraverse: Int
+	"""
+	Value of the `Rpl_semi_sync_source_wait_sessions` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_wait_sessions.
+	"""
+	Rpl_semi_sync_source_wait_sessions: Int
+	"""
+	Value of the `Rpl_semi_sync_source_yes_tx` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_source_yes_tx.
+	"""
+	Rpl_semi_sync_source_yes_tx: Int
+	"""
+	Value of the `Rsa_public_key` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rsa_public_key.
+	"""
+	Rsa_public_key: String
+	"""
+	Value of the `Secondary_engine_execution_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Secondary_engine_execution_count.
+	"""
+	Secondary_engine_execution_count: Int
+	"""
+	Value of the `Select_full_join` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Select_full_join.
+	"""
+	Select_full_join: Int
+	"""
+	Value of the `Select_full_range_join` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Select_full_range_join.
+	"""
+	Select_full_range_join: Int
+	"""
+	Value of the `Select_range` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Select_range.
+	"""
+	Select_range: Int
+	"""
+	Value of the `Select_range_check` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Select_range_check.
+	"""
+	Select_range_check: Int
+	"""
+	Value of the `Select_scan` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Select_scan.
+	"""
+	Select_scan: Int
+	"""
+	Value of the `Slave_open_temp_tables` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Slave_open_temp_tables.
+	"""
+	Slave_open_temp_tables: Int
+	"""
+	Value of the `Slave_rows_last_search_algorithm_used` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Slave_rows_last_search_algorithm_used.
+	"""
+	Slave_rows_last_search_algorithm_used: String
+	"""
+	Value of the `Slow_launch_threads` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Slow_launch_threads.
+	"""
+	Slow_launch_threads: Int
+	"""
+	Value of the `Slow_queries` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Slow_queries.
+	"""
+	Slow_queries: Int
+	"""
+	Value of the `Sort_merge_passes` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Sort_merge_passes.
+	"""
+	Sort_merge_passes: Int
+	"""
+	Value of the `Sort_range` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Sort_range.
+	"""
+	Sort_range: Int
+	"""
+	Value of the `Sort_rows` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Sort_rows.
+	"""
+	Sort_rows: Int
+	"""
+	Value of the `Sort_scan` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Sort_scan.
+	"""
+	Sort_scan: Int
+	"""
+	Value of the `Ssl_accept_renegotiates` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_accept_renegotiates.
+	"""
+	Ssl_accept_renegotiates: Int
+	"""
+	Value of the `Ssl_accepts` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_accepts.
+	"""
+	Ssl_accepts: Int
+	"""
+	Value of the `Ssl_callback_cache_hits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_callback_cache_hits.
+	"""
+	Ssl_callback_cache_hits: Int
+	"""
+	Value of the `Ssl_cipher` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_cipher.
+	"""
+	Ssl_cipher: String
+	"""
+	Value of the `Ssl_cipher_list` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_cipher_list.
+	"""
+	Ssl_cipher_list: String
+	"""
+	Value of the `Ssl_client_connects` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_client_connects.
+	"""
+	Ssl_client_connects: Int
+	"""
+	Value of the `Ssl_connect_renegotiates` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_connect_renegotiates.
+	"""
+	Ssl_connect_renegotiates: Int
+	"""
+	Value of the `Ssl_ctx_verify_depth` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_ctx_verify_depth.
+	"""
+	Ssl_ctx_verify_depth: Int
+	"""
+	Value of the `Ssl_ctx_verify_mode` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_ctx_verify_mode.
+	"""
+	Ssl_ctx_verify_mode: Int
+	"""
+	Value of the `Ssl_default_timeout` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_default_timeout.
+	"""
+	Ssl_default_timeout: Int
+	"""
+	Value of the `Ssl_finished_accepts` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_finished_accepts.
+	"""
+	Ssl_finished_accepts: Int
+	"""
+	Value of the `Ssl_finished_connects` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_finished_connects.
+	"""
+	Ssl_finished_connects: Int
+	"""
+	Value of the `Ssl_server_not_after` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_server_not_after.
+	"""
+	Ssl_server_not_after: Int
+	"""
+	Value of the `Ssl_server_not_before` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_server_not_before.
+	"""
+	Ssl_server_not_before: Int
+	"""
+	Value of the `Ssl_session_cache_hits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_session_cache_hits.
+	"""
+	Ssl_session_cache_hits: Int
+	"""
+	Value of the `Ssl_session_cache_misses` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_session_cache_misses.
+	"""
+	Ssl_session_cache_misses: Int
+	"""
+	Value of the `Ssl_session_cache_mode` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_session_cache_mode.
+	"""
+	Ssl_session_cache_mode: String
+	"""
+	Value of the `Ssl_session_cache_overflows` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_session_cache_overflows.
+	"""
+	Ssl_session_cache_overflows: Int
+	"""
+	Value of the `Ssl_session_cache_size` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_session_cache_size.
+	"""
+	Ssl_session_cache_size: Int
+	"""
+	Value of the `Ssl_session_cache_timeouts` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_session_cache_timeouts.
+	"""
+	Ssl_session_cache_timeouts: Int
+	"""
+	Value of the `Ssl_sessions_reused` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_sessions_reused.
+	"""
+	Ssl_sessions_reused: Int
+	"""
+	Value of the `Ssl_used_session_cache_entries` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_used_session_cache_entries.
+	"""
+	Ssl_used_session_cache_entries: Int
+	"""
+	Value of the `Ssl_verify_depth` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_verify_depth.
+	"""
+	Ssl_verify_depth: Int
+	"""
+	Value of the `Ssl_verify_mode` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_verify_mode.
+	"""
+	Ssl_verify_mode: Int
+	"""
+	Value of the `Ssl_version` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Ssl_version.
+	"""
+	Ssl_version: String
+	"""
+	Value of the `Table_locks_immediate` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Table_locks_immediate.
+	"""
+	Table_locks_immediate: Int
+	"""
+	Value of the `Table_locks_waited` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Table_locks_waited.
+	"""
+	Table_locks_waited: Int
+	"""
+	Value of the `Table_open_cache_hits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Table_open_cache_hits.
+	"""
+	Table_open_cache_hits: Int
+	"""
+	Value of the `Table_open_cache_misses` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Table_open_cache_misses.
+	"""
+	Table_open_cache_misses: Int
+	"""
+	Value of the `Table_open_cache_overflows` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Table_open_cache_overflows.
+	"""
+	Table_open_cache_overflows: Int
+	"""
+	Value of the `Tc_log_max_pages_used` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Tc_log_max_pages_used.
+	"""
+	Tc_log_max_pages_used: Int
+	"""
+	Value of the `Tc_log_page_size` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Tc_log_page_size.
+	"""
+	Tc_log_page_size: Int
+	"""
+	Value of the `Tc_log_page_waits` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Tc_log_page_waits.
+	"""
+	Tc_log_page_waits: Int
+	"""
+	Value of the `Threads_cached` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Threads_cached.
+	"""
+	Threads_cached: Int
+	"""
+	Value of the `Threads_connected` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Threads_connected.
+	"""
+	Threads_connected: Int
+	"""
+	Value of the `Threads_created` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Threads_created.
+	"""
+	Threads_created: Int
+	"""
+	Value of the `Threads_running` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Threads_running.
+	"""
+	Threads_running: Int
+	"""
+	Value of the `Uptime` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Uptime.
+	"""
+	Uptime: Int
+	"""
+	Value of the `Uptime_since_flush_status` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Uptime_since_flush_status.
+	"""
+	Uptime_since_flush_status: Int
+	"""
+	Value of the `validate_password_dictionary_file_last_parsed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/validate-password-options-variables.html#statvar_validate_password_dictionary_file_last_parsed.
+	"""
+	validate_password_dictionary_file_last_parsed: String
+	"""
+	Value of the `validate_password_dictionary_file_words_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/validate-password-options-variables.html#statvar_validate_password_dictionary_file_words_count.
+	"""
+	validate_password_dictionary_file_words_count: Int
+	"""
+	Value of the `validate_password.dictionary_file_last_parsed` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/validate-password-options-variables.html#statvar_validate_password.dictionary_file_last_parsed.
+	"""
+	validate_password__dictionary_file_last_parsed: String
+	"""
+	Value of the `validate_password.dictionary_file_words_count` variable.
+
+	Learn more at https://dev.mysql.com/doc/refman/8.0/en/validate-password-options-variables.html#statvar_validate_password.dictionary_file_words_count.
+	"""
+	validate_password__dictionary_file_words_count: Int
+}

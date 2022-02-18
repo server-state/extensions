@@ -56,11 +56,13 @@
 	"dependencies": {
 		"@server-state/cpu-overview-extension": "file:packages/cpu-overview-extension",
 		"@server-state/network-devices-overview-extension": "file:packages/network-devices-overview-extension",
-		"@server-state/plain-logger-ext": "file:packages/plain-logger-extension"
+		"@server-state/plain-logger-ext": "file:packages/plain-logger-extension",
+		"@server-state/mysql-status-extension": "file:packages/mysql-status-extension"
 	},
 	"workspaces": [
 		"packages/cpu-overview-extension",
 		"packages/plain-logger-extension",
-		"packages/network-devices-overview-extension"
+		"packages/network-devices-overview-extension",
+		"packages/mysql-status-extension"
 	]
 }
