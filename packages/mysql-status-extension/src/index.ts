@@ -3,11 +3,11 @@ import * as mysql from 'mysql2/promise';
 import { RowDataPacket } from 'mysql2';
 import typeDefs from './schema.graphql';
 
-const extension: Extension<Record<string, never>> = async () => {
+const extension: Extension<Record<string, string>> = async config => {
 	const resolvers = {
 		ServerState: {
 			MYSQLSTAT: async () => {
-				const conn = await mysql.createConnection({});
+				const conn = await mysql.createConnection(config ?? {});
 				const [rows] = await conn.execute('SHOW GLOBAL STATUS;');
 
 				const returnObject: Record<string, string | number | boolean> = {};
