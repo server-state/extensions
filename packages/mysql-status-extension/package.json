@@ -22,7 +22,7 @@
 	],
 	"devDependencies": {
 		"@server-state/types": "^0.5.0",
-		"axios": "^0.26.0",
+		"axios": "^0.27.2",
 		"cheerio": "^1.0.0-rc.10"
 	},
 	"publishConfig": {
