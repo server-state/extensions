@@ -42,7 +42,7 @@
 		"glob": "8.0.3",
 		"prettier": "2.7.1",
 		"rimraf": "3.0.2",
-		"rollup": "2.77.0",
+		"rollup": "2.77.1",
 		"rollup-plugin-license": "2.8.1",
 		"rollup-plugin-node-externals": "4.1.1",
 		"rollup-plugin-peer-deps-external": "2.2.4",
