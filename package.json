@@ -35,7 +35,7 @@
 		"enquirer": "2.3.6",
 		"eslint": "8.36.0",
 		"eslint-config-airbnb": "19.0.4",
-		"eslint-config-prettier": "8.7.0",
+		"eslint-config-prettier": "8.8.0",
 		"eslint-plugin-import": "2.27.5",
 		"eslint-plugin-jsdoc": "39.9.1",
 		"eslint-plugin-prettier": "4.2.1",
