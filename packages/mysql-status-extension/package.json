@@ -29,6 +29,6 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"mysql2": "^2.3.3"
+		"mysql2": "^3.0.0"
 	}
 }
